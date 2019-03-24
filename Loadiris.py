@@ -43,13 +43,17 @@ plt.show()
 dataset.hist()
 plt.show()
 
+# Create pie chart
+labels ='setosa', 'versicolor','virginica'
+colors =['red','green','yellow']
+explode =(0.1,0,0)
+plt.pie(dataset.groupby('species').size(),explode=explode,colors=colors,autopct='%1.1f%%', shadow=True)
 
 # create scatter plot matrix
 scatter_matrix(dataset)
 plt.show()
 
 #Plotting Petal Length vs Petal Width & Sepal Length vs Sepal width
-#warnings.simplefilter("ignore")#Supress any warning
 plt.figure()
 fig,ax=plt.subplots(1,2,figsize=(17, 9))
 dataset.plot(x="sepal_length",y="sepal_width",kind="scatter",ax=ax[0],sharex=False,sharey=False,label="sepal",color='r')
