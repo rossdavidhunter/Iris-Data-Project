@@ -13,10 +13,12 @@ raw_data="iris.csv"
 dataset = pandas.read_csv(raw_data)
 
 # how to get # of Rows and columns
-print(dataset.shape)
+if input("Would you like to view # of rows and columns? (Y/N): ") == "Y":       
+   print(dataset.shape)
 
 # Shows first 20 rows of data, good to get a quick view of data
-print(dataset.head(20))
+if input("Would you like to view the first 20 rows of data? (Y/N): ") == "Y": 
+    print(dataset.head(20))
 
 # Gives you count, max, min and percentiles
 print(dataset.describe())
