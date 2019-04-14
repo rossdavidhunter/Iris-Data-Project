@@ -41,4 +41,7 @@ In addition to being probably the greatest statistician ever, he also invented e
 # Review of Code
 
 
-#References/Links
+# Discussion of simple machine learning example
+
+
+# References/Links

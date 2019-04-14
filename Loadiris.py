@@ -8,6 +8,8 @@ from pandas.plotting import scatter_matrix
 import matplotlib.pyplot as plt
 import numpy as np
 import warnings
+from sklearn import tree
+from sklearn.metrics import accuracy_score
 
 raw_data="iris.csv"
 dataset = pandas.read_csv(raw_data)
@@ -66,8 +68,6 @@ ax[0].legend()
 ax[1].legend()
 
 plt.show()
-
-
 
 
 
