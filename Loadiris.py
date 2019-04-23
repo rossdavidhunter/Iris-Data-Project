@@ -1,7 +1,9 @@
 # Ross Hunter, 2019, Iris Data Set Project
 
-#Adapted from:https://machinelearningmastery.com/machine-learning-in-python-step-by-step/ and https://scikit-learn.org/stable/auto_examples/datasets/plot_iris_dataset.html and
-https://www.kaggle.com/abhishekkrg/python-iris-data-visualization-and-explanation
+#Adapted from:https://machinelearningmastery.com/machine-learning-in-python-step-by-step/ and https://scikit-learn.org/stable/auto_examples/datasets/plot_iris_dataset.html and 
+# https://www.kaggle.com/abhishekkrg/python-iris-data-visualization-and-explanation
+
+# 1. Import in all your packages
 
 import sys
 print('Python: {}'.format(sys.version))
@@ -14,23 +16,23 @@ import warnings
 from sklearn import tree
 from sklearn.metrics import accuracy_score
 
-# import raw data file
+# 2. import raw data file
 
 raw_data="iris.csv"
 dataset = pandas.read_csv(raw_data)
 
-# how to get # of Rows and columns
+# 3. how to get # of Rows and columns
      
 print(dataset.shape)
 
-# Shows first 20 rows of data
+# 4. Shows first 20 rows of data
 
 print(dataset.head(20))
 
-# Gives you count, max, min and percentiles
+# 5. Gives you count, max, min and percentiles
 print(dataset.describe())
 
-# Create dataset for each species
+# 6. Create dataset for each species
 
 setosa=dataset[dataset['species']=='setosa']
 versicolor =dataset[dataset['species']=='versicolor']
