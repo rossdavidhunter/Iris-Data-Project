@@ -5,7 +5,9 @@ from sklearn import tree
 from sklearn.metrics import accuracy_score
 import matplotlib.pyplot as plt
 
-# Simple Machine Learning Example
+# Simple Machine Learning Example using data from sklearn
+
+# Verbatim: https://dev.to/liveedutv/a-simple-machine-learning-project-in-python-5d11
 
 iris = datasets.load_iris()
 digits = datasets.load_digits()

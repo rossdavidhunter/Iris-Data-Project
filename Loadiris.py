@@ -1,5 +1,8 @@
 # Ross Hunter, 2019, Iris Data Set Project
 
+#Adapted from:https://machinelearningmastery.com/machine-learning-in-python-step-by-step/ and https://scikit-learn.org/stable/auto_examples/datasets/plot_iris_dataset.html and
+https://www.kaggle.com/abhishekkrg/python-iris-data-visualization-and-explanation
+
 import sys
 print('Python: {}'.format(sys.version))
 import numpy
@@ -11,16 +14,18 @@ import warnings
 from sklearn import tree
 from sklearn.metrics import accuracy_score
 
+# import raw data file
+
 raw_data="iris.csv"
 dataset = pandas.read_csv(raw_data)
 
 # how to get # of Rows and columns
-if input("Would you like to view # of rows and columns? (Y/N): ") == "Y":       
-   print(dataset.shape)
+     
+print(dataset.shape)
 
-# Shows first 20 rows of data, good to get a quick view of data
-if input("Would you like to view the first 20 rows of data? (Y/N): ") == "Y": 
-    print(dataset.head(20))
+# Shows first 20 rows of data
+
+print(dataset.head(20))
 
 # Gives you count, max, min and percentiles
 print(dataset.describe())
