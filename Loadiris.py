@@ -16,20 +16,20 @@ import warnings
 from sklearn import tree
 from sklearn.metrics import accuracy_score
 
-# 2. import raw data file
+# 2. Import of raw data file
 
 raw_data="iris.csv"
 dataset = pandas.read_csv(raw_data)
 
-# 3. how to get # of Rows and columns
+# 3. How to view # of Rows and columns
      
 print(dataset.shape)
 
-# 4. Shows first 20 rows of data
+# 4. Show first 20 rows of data, get a snapshot
 
 print(dataset.head(20))
 
-# 5. Gives you count, max, min and percentiles
+# 5. Obtain count, max, min and percentiles
 print(dataset.describe())
 
 # 6. Create dataset for each species
@@ -42,29 +42,29 @@ print(setosa.describe())
 print(versicolor.describe())
 print(virginica.describe())
 
-# number of rows that belong to each species
+# 7. View number of rows that belong to each species
 print(dataset.groupby('species').size())
 
 
-# create box and whisker plots
+# 8. Create box and whisker plots
 dataset.plot(kind='box', subplots=True, layout=(2,2), sharex=False, sharey=False)
 plt.show()
 
-# Create histograms
+# 9. Create histograms
 dataset.hist()
 plt.show()
 
-# Create pie chart
+# 10. Create colour pie chart
 labels ='setosa', 'versicolor','virginica'
 colors =['red','green','yellow']
 explode =(0.1,0,0)
 plt.pie(dataset.groupby('species').size(),explode=explode,colors=colors,autopct='%1.1f%%', shadow=True)
 
-# create scatter plot matrix
+# 11. Create scatter plot matrix
 scatter_matrix(dataset)
 plt.show()
 
-#Plotting Petal Length vs Petal Width & Sepal Length vs Sepal width
+# 12. Plotting Petal Length vs Petal Width & Sepal Length vs Sepal width
 plt.figure()
 fig,ax=plt.subplots(1,2,figsize=(17, 9))
 dataset.plot(x="sepal_length",y="sepal_width",kind="scatter",ax=ax[0],sharex=False,sharey=False,label="sepal",color='r')
@@ -75,6 +75,8 @@ ax[0].legend()
 ax[1].legend()
 
 plt.show()
+
+ 
 
 
 
