@@ -30,6 +30,7 @@ print(dataset.shape)
 print(dataset.head(20))
 
 # 5. Obtain count, max, min and percentiles
+
 print(dataset.describe())
 
 # 6. Create dataset for each species
@@ -43,28 +44,34 @@ print(versicolor.describe())
 print(virginica.describe())
 
 # 7. View number of rows that belong to each species
+
 print(dataset.groupby('species').size())
 
 
 # 8. Create box and whisker plots
+
 dataset.plot(kind='box', subplots=True, layout=(2,2), sharex=False, sharey=False)
 plt.show()
 
 # 9. Create histograms
+
 dataset.hist()
 plt.show()
 
 # 10. Create colour pie chart
+
 labels ='setosa', 'versicolor','virginica'
 colors =['red','green','yellow']
 explode =(0.1,0,0)
 plt.pie(dataset.groupby('species').size(),explode=explode,colors=colors,autopct='%1.1f%%', shadow=True)
 
 # 11. Create scatter plot matrix
+
 scatter_matrix(dataset)
 plt.show()
 
 # 12. Plotting Petal Length vs Petal Width & Sepal Length vs Sepal width
+
 plt.figure()
 fig,ax=plt.subplots(1,2,figsize=(17, 9))
 dataset.plot(x="sepal_length",y="sepal_width",kind="scatter",ax=ax[0],sharex=False,sharey=False,label="sepal",color='r')
